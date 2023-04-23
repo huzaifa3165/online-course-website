@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,450;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primaryColor: #03045e;
+    --secondaryColor: #03045e;
+    --tertioryColor: #003458;
+    --lightColor: #fff;
+    --shadow: grey;
+}
+
+/* Giving a margin and padding */
+.except {
+    background-color: var(--lightColor);
+    margin: 0 5%;
+}
+
+/* header */
+header {
+    height: 100vh;
+}
+
+/* my nav */
+nav {
+    margin-top: 6vh;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    animation: nav 0.8s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+/* nav animation */
+@keyframes nav {
+    0% {
+        opacity: 100%;
+        transform: translateY(-30px) scale(0%);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px) scale(100%);
+    }
+}
+
+/* When nav is scrolled */
+.nav-colored {
+    background-color: var(--primaryColor);
+    box-shadow: 0px 2px 10px grey;
+    color: var(--lightColor);
+    animation: color 0.5s ease-in-out;
+
+}
+
+/* Animation on scrolling down */
+@keyframes color {
+    0% {
+        background-color: transparent;
+        box-shadow: 0px 0px 0px transparent;
+    }
+
+    100% {
+        background-color: var(--primaryColor);
+        box-shadow: 0px 2px 10px grey;
+
+
+    }
+}
+
+/* nav at its default i.e at zero scroll */
+.nav-transparent {
+    background-color: transparent;
+    color: white;
+    animation: trans 0.5s ease-in-out;
+}
+
+/* scrolling up animation */
+
+@keyframes trans {
+    0% {
+        background-color: #fff;
+    }
+
+    100% {
+        background-color: transparent;
+    }
+
+}
+
+/* text logo design */
+#page-logo {
+    color: var(--primaryColor);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+/* unorderd list of menu bar without logo  */
+
+.navul {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navli {
+    list-style: none;
+    padding: 0.8rem 1.2rem;
+    transition: 0.4s ease-in-out;
+}
+
+.navli a {
+    font-weight: 500;
+    color: var(--secondaryColor);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Sign up button and on menu items hover style */
+
+/* I add .mybtn to also style that in the same way  */
+.navul li:nth-child(5),
+nav li:hover, .mybtn {
+    background-color: var(--primaryColor);
+    padding: 0.3rem 0.85rem;
+    margin-left: 2rem;
+    margin-right: 0px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+}
+
+.navul li:nth-child(5) a,
+nav li:hover a ,.mybtn{
+
+    color: var(--lightColor);
+
+}
+.navul li:nth-child(5):hover{
+    background-color: var(--lightColor);
+    padding: 0.3rem 0.85rem;
+    margin-left: 2rem;
+    margin-right: 0px;
+    border-radius: 0px;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+}
+.navul li:nth-child(5):hover a{
+    color: var(--primaryColor);
+}
+
+/* Main code of the page start here */
+
+.front-section {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: text 1.2s ease-in-out;
+}
+
+.image-right {
+    position: relative;
+    height: 35rem;
+}
+
+.text-left h1 {
+    font-size: 3.8rem;
+    color: var(--secondaryColor);
+}
+
+@keyframes text {
+    0% {
+        opacity: 0%;
+        transform: translateY(-30%) scale(0%);
+    }
+
+    20% {
+        opacity: 0%;
+        transform: translateY(-10%) scale(0%);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0%) scale(100%);
+    }
+}
+
+.text-left p {
+    margin: 10px 0px;
+    font-size: 1rem;
+    color: var(--tertioryColor);
+    text-shadow: 2px black;
+}
+
+.mybtn {
+    font-weight: 500;
+    margin: 1.1rem 0;
+    border: none;
+    outline: none;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+}
+.mybtn:hover{
+    background-color: var(--lightColor);
+    padding: 0.3rem 0.85rem;
+    border-radius: 0px;
+    text-align: center;
+    transition: 0.6s ease-in-out;
+}
+.mybtn:hover{
+    color: var(--primaryColor);
+}
+
+/* HEADER ENDED HERE */
+
+.cardSec {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.cards {
+
+    height: 40vh;
+    border: 1px solid var(--tertioryColor);
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px var(--shadow);
+    display: block;
+    width: 30%;
+    margin: 1rem 1rem;
+}
+
+.card-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.hc {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    height: 10vh;
+    margin-top: 10px;
+}
+
+footer div {
+    color: var(--primaryColor);
+    text-shadow: 0px 0px 15px black;
+}
+
+footer div a {
+    color: #000126;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+/* On scroll properties which will over write the above one when there class name is changed by js */
+
+.nav-colored div {
+    color: var(--lightColor) !important;
+
+    transition: 0.5s ease-in-out;
+}
+.nav-colored ul li a {
+    color: var(--lightColor);
+
+    transition: 0.5s ease-in-out;
+}
+.nav-colored ul li:hover a {
+    color: var(--primaryColor);
+
+    transition: 0.5s ease-in-out;
+}
+
+
+.nav-colored .navul li:nth-child(5),
+.nav-colored li:hover {
+    background-color: var(--lightColor);
+}
+.nav-colored .navul li:nth-child(5):hover {
+    background-color: var(--primaryColor);
+}
+
+.nav-colored .navul li:nth-child(5) a {
+    color: var(--primaryColor);
+}
+.nav-colored .navul li:nth-child(5):hover a {
+    color: var(--lightColor);
+}
